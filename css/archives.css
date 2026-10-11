@@ -1,0 +1,432 @@
+/* =========================
+   PAGE ARCHIVES
+========================= */
+.archives-page {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255,255,255,.85), transparent 45%),
+    radial-gradient(circle at 80% 80%, rgba(255,210,230,.65), transparent 45%),
+    linear-gradient(135deg, #fce4ec, #f8bbd0);
+  /* La page reste derrière le menu */
+  z-index: 1;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: scale(1);
+  transition: opacity .35s ease, transform .35s ease;
+}
+.archives-page.show {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: scale(1);
+}
+/* Bulles décoratives */
+.archives-page .bubble:nth-child(1) {
+  width: 18px;
+  height: 18px;
+  top: 18%;
+  left: 12%;
+}
+.archives-page .bubble:nth-child(2) {
+  width: 12px;
+  height: 12px;
+  top: 30%;
+  right: 15%;
+}
+.archives-page .bubble:nth-child(3) {
+  width: 24px;
+  height: 24px;
+  bottom: 20%;
+  left: 20%;
+}
+.archives-page .bubble:nth-child(4) {
+  width: 14px;
+  height: 14px;
+  bottom: 14%;
+  right: 25%;
+}
+.archives-page .bubble:nth-child(5) {
+  width: 10px;
+  height: 10px;
+  top: 55%;
+  left: 7%;
+}
+.archives-page .bubble:nth-child(6) {
+  width: 20px;
+  height: 20px;
+  top: 12%;
+  right: 30%;
+}
+.archives-page .bubble:nth-child(7) {
+  width: 16px;
+  height: 16px;
+  bottom: 35%;
+  right: 8%;
+}
+.archives-page .bubble:nth-child(8) {
+  width: 11px;
+  height: 11px;
+  top: 70%;
+  left: 40%;
+}
+/* Fenêtre des archives */
+.archives-window {
+  position: relative;
+  width: min(820px, 76vw);
+  height: min(470px, 65vh);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 1;
+  background: rgba(255,255,255,.48);
+  border: 1px solid rgba(255,255,255,.9);
+  border-radius: 20px;
+  box-shadow:
+    0 8px 32px rgba(180,120,150,.15),
+    inset 0 1px 0 rgba(255,255,255,.7);
+  backdrop-filter: blur(13px);
+  -webkit-backdrop-filter: blur(13px);
+}
+/* Barre de titre */
+.archives-window-bar {
+  position: relative;
+  height: 52px;
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 22px;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(255,255,255,.7);
+}
+.window-dots {
+  position: absolute;
+  left: 22px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.window-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+.window-dot-pink {
+  background: #f2b8ce;
+}
+.window-dot-gray {
+  background: #d5d1d7;
+}
+.window-dot-white {
+  background: #fff;
+}
+.archives-window-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: calc(100% - 120px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #aaa8ad;
+  font-family: "Courier New", monospace;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: .5px;
+}
+/* Dossiers */
+.archives-files {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(45px, 8vw, 105px);
+  padding: 35px;
+}
+.archive-file {
+  width: 150px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: none;
+  background: transparent;
+  color: #aaa8ad;
+  font-family: "Courier New", monospace;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.archive-file:focus-visible {
+  outline: 1px solid rgba(180,140,160,.7);
+  outline-offset: 4px;
+  border-radius: 8px;
+}
+.archive-folder {
+  position: relative;
+  width: 105px;
+  height: 78px;
+  margin-bottom: 4px;
+  filter: drop-shadow(0 4px 5px rgba(170,120,145,.12));
+  transition: transform .2s ease;
+}
+.archive-file:hover .archive-folder {
+  transform: translateY(-3px);
+}
+.folder-tab {
+  position: absolute;
+  top: 0;
+  left: 8px;
+  width: 37px;
+  height: 17px;
+  border-radius: 6px 6px 0 0;
+  background: #f7c7d9;
+}
+.folder-body {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 105px;
+  height: 63px;
+  border-radius: 5px 8px 8px 8px;
+  background: linear-gradient(145deg, #fbdce7, #f3b9d0);
+  border: 1px solid rgba(255,255,255,.8);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.65);
+}
+.folder-shine {
+  position: absolute;
+  top: 22px;
+  left: 8px;
+  width: 88px;
+  height: 1px;
+  background: rgba(255,255,255,.65);
+}
+.archive-file-label {
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  font-weight: 600;
+  color: #aaa8ad;
+  text-align: center;
+  white-space: nowrap;
+}
+/* Menu hamburger : toujours au-dessus des archives */
+.archives-body .menu-button {
+  position: fixed !important;
+  top: 62px !important;
+  right: 20px !important;
+  z-index: 30001 !important;
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+.archives-body .menu-panel {
+  position: fixed !important;
+  top: 112px !important;
+  right: 20px !important;
+  z-index: 30002 !important;
+}
+/* Adaptation mobile */
+@media (max-width: 768px) {
+  .archives-window {
+    width: 88vw;
+    height: 58vh;
+    min-height: 360px;
+  }
+  .archives-window-bar {
+    height: 45px;
+    min-height: 45px;
+    padding: 0 14px;
+  }
+  .window-dots {
+    left: 14px;
+    gap: 6px;
+  }
+  .window-dot {
+    width: 7px;
+    height: 7px;
+  }
+  .archives-window-title {
+    max-width: calc(100% - 100px);
+    font-size: 11px;
+    letter-spacing: .2px;
+  }
+  .archives-files {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-content: center;
+    justify-items: center;
+    gap: 20px 10px;
+    padding: 20px 12px;
+  }
+  .archive-file {
+    width: 125px;
+    padding: 8px;
+    gap: 8px;
+  }
+  .archive-folder {
+    width: 88px;
+    height: 66px;
+    margin-bottom: 0;
+  }
+  .folder-tab {
+    width: 31px;
+    height: 14px;
+    left: 7px;
+  }
+  .folder-body {
+    width: 88px;
+    height: 56px;
+  }
+  .folder-shine {
+    top: 22px;
+    width: 74px;
+  }
+  .archive-file-label {
+    font-size: 11px;
+  }
+  .archive-file:last-child {
+    grid-column: 1 / -1;
+  }
+  .archives-body .menu-button {
+    top: 58px !important;
+  }
+  .archives-body .menu-panel {
+    top: 103px !important;
+  }
+}
+@media (max-width: 420px) {
+  .archives-window {
+    width: 91vw;
+    height: 57vh;
+  }
+  .archives-window-title {
+    max-width: calc(100% - 90px);
+    font-size: 10px;
+    letter-spacing: 0;
+  }
+  .archives-files {
+    gap: 12px 4px;
+  }
+  .archive-file {
+    width: 110px;
+  }
+  .archive-folder {
+    transform: scale(.9);
+    margin-bottom: 5px;
+  }
+  .archive-file-label {
+    font-size: 10px;
+  }
+  .archives-date {
+    display: none;
+  }
+}
+
+
+/* =========================================================
+   FOND UNIFORME — REPRISE DU FOND DE playlist2Love
+   Ces règles ne modifient que le fond et les bulles décoratives.
+========================================================= */
+.intro-page,
+.main-page,
+.archives-page {
+  background:
+    radial-gradient(ellipse at 18% 18%, rgba(255,255,255,.95), transparent 37%),
+    radial-gradient(ellipse at 83% 28%, rgba(255,191,218,.72), transparent 45%),
+    radial-gradient(ellipse at 45% 100%, rgba(255,215,233,.9), transparent 55%),
+    linear-gradient(125deg, #fff1f7 0%, #f9dce9 46%, #f4c7df 100%);
+  background-attachment: fixed;
+}
+
+.intro-page > .bubble,
+.main-page > .bubble,
+.archives-page > .bubble {
+  position: absolute;
+  display: block;
+  z-index: 0;
+  border: 1px solid rgba(255,255,255,.8);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 29% 23%, rgba(255,255,255,.98) 0%, rgba(255,255,255,.6) 9%, rgba(255,255,255,.12) 28%, transparent 47%),
+    radial-gradient(circle at 68% 75%, rgba(233,151,192,.2), transparent 45%),
+    linear-gradient(135deg, rgba(255,255,255,.45), rgba(255,220,239,.14) 50%, rgba(255,255,255,.48));
+  box-shadow:
+    inset -8px -10px 18px rgba(231,154,191,.13),
+    inset 5px 5px 15px rgba(255,255,255,.7),
+    0 8px 24px rgba(215,133,175,.1);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  animation: float-bubble 16s ease-in-out infinite;
+  will-change: transform;
+  pointer-events: none;
+}
+
+/* Positions et rythmes identiques sur les trois pages. */
+.intro-page > .bubble:nth-child(1),
+.main-page > .bubble:nth-child(1),
+.archives-page > .bubble:nth-child(1) { width:145px; height:145px; left:8%; top:24%; animation-duration:19s; }
+.intro-page > .bubble:nth-child(2),
+.main-page > .bubble:nth-child(2),
+.archives-page > .bubble:nth-child(2) { width:70px; height:70px; left:47%; top:18%; animation-duration:13s; animation-delay:-5s; }
+.intro-page > .bubble:nth-child(3),
+.main-page > .bubble:nth-child(3),
+.archives-page > .bubble:nth-child(3) { width:92px; height:92px; right:13%; top:34%; animation-duration:17s; animation-delay:-8s; }
+.intro-page > .bubble:nth-child(4),
+.main-page > .bubble:nth-child(4),
+.archives-page > .bubble:nth-child(4) { width:54px; height:54px; left:4%; top:61%; animation-duration:12s; animation-delay:-3s; }
+.intro-page > .bubble:nth-child(5),
+.main-page > .bubble:nth-child(5),
+.archives-page > .bubble:nth-child(5) { width:105px; height:105px; right:7%; bottom:8%; animation-duration:21s; animation-delay:-9s; }
+.intro-page > .bubble:nth-child(6),
+.main-page > .bubble:nth-child(6),
+.archives-page > .bubble:nth-child(6) { width:115px; height:115px; left:2%; bottom:-25px; animation-duration:18s; animation-delay:-6s; }
+.intro-page > .bubble:nth-child(7),
+.main-page > .bubble:nth-child(7),
+.archives-page > .bubble:nth-child(7) { width:40px; height:40px; right:28%; top:13%; animation-duration:14s; animation-delay:-2s; }
+.intro-page > .bubble:nth-child(8),
+.main-page > .bubble:nth-child(8),
+.archives-page > .bubble:nth-child(8) { width:48px; height:48px; right:4%; top:60%; animation-duration:15s; animation-delay:-7s; }
+.intro-page > .bubble:nth-child(9),
+.main-page > .bubble:nth-child(9),
+.archives-page > .bubble:nth-child(9) { width:30px; height:30px; left:35%; bottom:16%; animation-duration:11s; animation-delay:-4s; }
+
+/* Le contenu reste au-dessus des bulles. */
+.intro-page > .page-top-bar,
+.intro-page > .intro-notification,
+.main-page > .page-top-bar,
+.main-page > .ornament-frame,
+.archives-page > .page-top-bar,
+.archives-page > .archives-window {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes float-bubble {
+  0%, 100% { transform: translate3d(0,0,0) scale(1); }
+  25% { transform: translate3d(20px,-28px,0) scale(1.035); }
+  50% { transform: translate3d(-12px,-48px,0) scale(.98); }
+  75% { transform: translate3d(-25px,-18px,0) scale(1.025); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .intro-page > .bubble,
+  .main-page > .bubble,
+  .archives-page > .bubble {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
