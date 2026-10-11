@@ -29,8 +29,8 @@ document.addEventListener("DOMContentLoaded", () => {
    */
   const tracks = [
     {
-      title: "Une chanson pour toi",
-      artist: "Daft Punk",
+      title: "Something About Us",
+      artist: "emojiprincesse",
       src: "daft-punk.mp3",
       duration: "",
       art: "art-1"
