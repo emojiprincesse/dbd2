@@ -36,17 +36,17 @@ document.addEventListener("DOMContentLoaded", () => {
       art: "art-1"
     },
     {
-      title: "La vie en rose",
-      artist: "Édith Piaf",
-      src: "",
-      duration: "3:07",
+      title: "drive ME crazy!",
+      artist: "emojiprincesse",
+      src: "lil-yatchy.mp3",
+      duration: "",
       art: "art-2"
     },
     {
-      title: "Until I Found You",
-      artist: "Stephen Sanchez",
-      src: "",
-      duration: "2:57",
+      title: "Carte Postale (pt.2)",
+      artist: "emojiprincesse",
+      src: "tengo-john.mp3",
+      duration: "",
       art: "art-3"
     },
     {
