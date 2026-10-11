@@ -1,0 +1,381 @@
+/* =========================================================
+   STYLES COMMUNS À TOUTES LES PAGES
+========================================================= */
+* {
+  box-sizing: border-box;
+  font-family: "Courier New", monospace;
+}
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  overflow: hidden;
+}
+/* =========================================================
+   BULLES
+========================================================= */
+.bubble {
+  position: absolute;
+  display: block;
+  border: 1px solid rgba(255,255,255,.8);
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 1;
+  background:
+    radial-gradient(circle at 29% 23%, rgba(255,255,255,.98) 0%, rgba(255,255,255,.6) 9%, rgba(255,255,255,.12) 28%, transparent 47%),
+    radial-gradient(circle at 68% 75%, rgba(233,151,192,.2), transparent 45%),
+    linear-gradient(135deg, rgba(255,255,255,.45), rgba(255,220,239,.14) 50%, rgba(255,255,255,.48));
+  box-shadow:
+    inset -8px -10px 18px rgba(231,154,191,.13),
+    inset 5px 5px 15px rgba(255,255,255,.7),
+    0 8px 24px rgba(215,133,175,.1);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  animation: float-bubble 16s ease-in-out infinite;
+  will-change: transform;
+  z-index: 0;
+}
+.bubble.pink,
+.bubble.gray {
+  background:
+    radial-gradient(circle at 29% 23%, rgba(255,255,255,.98) 0%, rgba(255,255,255,.6) 9%, rgba(255,255,255,.12) 28%, transparent 47%),
+    radial-gradient(circle at 68% 75%, rgba(233,151,192,.2), transparent 45%),
+    linear-gradient(135deg, rgba(255,255,255,.45), rgba(255,220,239,.14) 50%, rgba(255,255,255,.48));
+  border: 1px solid rgba(255,255,255,.8);
+}
+/* Positions, tailles et rythmes identiques au fond playlist2Love */
+.bubble:nth-child(1) { width:145px; height:145px; left:8%; top:24%; animation-duration:19s; }
+.bubble:nth-child(2) { width:70px; height:70px; left:47%; top:18%; animation-duration:13s; animation-delay:-5s; }
+.bubble:nth-child(3) { width:92px; height:92px; right:13%; top:34%; animation-duration:17s; animation-delay:-8s; }
+.bubble:nth-child(4) { width:54px; height:54px; left:4%; top:61%; animation-duration:12s; animation-delay:-3s; }
+.bubble:nth-child(5) { width:105px; height:105px; right:7%; bottom:8%; animation-duration:21s; animation-delay:-9s; }
+.bubble:nth-child(6) { width:115px; height:115px; left:2%; bottom:-25px; animation-duration:18s; animation-delay:-6s; }
+.bubble:nth-child(7) { width:40px; height:40px; right:28%; top:13%; animation-duration:14s; animation-delay:-2s; }
+.bubble:nth-child(8) { width:48px; height:48px; right:4%; top:60%; animation-duration:15s; animation-delay:-7s; }
+.bubble:nth-child(9) { width:30px; height:30px; left:35%; bottom:16%; animation-duration:11s; animation-delay:-4s; }
+@keyframes float-bubble {
+  0%, 100% { transform: translate3d(0,0,0) scale(1); }
+  25% { transform: translate3d(20px,-28px,0) scale(1.035); }
+  50% { transform: translate3d(-12px,-48px,0) scale(.98); }
+  75% { transform: translate3d(-25px,-18px,0) scale(1.025); }
+}
+/* =========================================================
+   BARRE SUPÉRIEURE
+========================================================= */
+.page-top-bar {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  right: 8px;
+  height: 46px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  padding: 0 18px;
+  border: 1px solid rgba(255,255,255,0.85);
+  border-radius: 15px;
+  background: rgba(255,255,255,0.42);
+  box-shadow:
+    0 4px 12px rgba(170,168,173,0.08),
+    inset 0 1px 1px rgba(255,255,255,0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #aaa8ad;
+}
+.page-top-bar-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: .02em;
+}
+.page-top-bar-apple {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  color: #aaa8ad;
+  line-height: 1;
+}
+.page-top-bar-title {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: .02em;
+}
+.page-top-bar-date {
+  margin-left: auto;
+  font-size: 15px;
+  font-weight: 600;
+}
+/* =========================================================
+   MENU HAMBURGER
+========================================================= */
+.menu-button {
+  position: fixed;
+  top: 62px;
+  right: 20px;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(255,255,255,0.75);
+  background: rgba(255,255,255,0.75);
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 30001;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 3px 10px rgba(170,168,173,0.08);
+}
+.menu-button span {
+  display: block;
+  width: 17px;
+  height: 1px;
+  flex-shrink: 0;
+  background: #aaa8ad;
+  transition:
+    transform .25s ease,
+    opacity .25s ease;
+}
+/* Animation du hamburger lorsqu'il est ouvert */
+.menu-button.active span:nth-child(1) {
+  transform: translateY(5px) rotate(45deg);
+}
+.menu-button.active span:nth-child(2) {
+  opacity: 0;
+}
+.menu-button.active span:nth-child(3) {
+  transform: translateY(-5px) rotate(-45deg);
+}
+/* =========================================================
+   PANNEAU DU MENU
+========================================================= */
+.menu-panel {
+  position: fixed;
+  top: 112px;
+  right: 20px;
+  z-index: 30002;
+  min-width: 170px;
+  padding: 10px;
+  border: 1px solid rgba(255,255,255,0.8);
+  border-radius: 16px;
+  background: rgba(255,255,255,0.92);
+  box-shadow: 0 8px 25px rgba(170,168,173,0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-8px);
+  transition:
+    opacity .25s ease,
+    visibility .25s ease,
+    transform .25s ease;
+}
+.menu-panel.show {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+.menu-item {
+  display: block;
+  width: 100%;
+  padding: 9px 12px;
+  border: none;
+  background: transparent;
+  color: #aaa8ad;
+  font-family: "Courier New", monospace;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.menu-item:hover {
+  background: rgba(255,255,255,0.75);
+}
+/* =========================================================
+   PRIORITÉ DU MENU SUR LA PAGE ARCHIVES
+========================================================= */
+.archives-body .menu-button {
+  position: fixed !important;
+  top: 62px !important;
+  right: 20px !important;
+  z-index: 30001 !important;
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+.archives-body .menu-panel {
+  position: fixed !important;
+  top: 112px !important;
+  right: 20px !important;
+  z-index: 30002 !important;
+}
+/* =========================================================
+   ADAPTATION MOBILE / IPAD
+========================================================= */
+@media (max-width: 768px) {
+  .page-top-bar {
+    height: 42px;
+    padding: 0 13px;
+    border-radius: 13px;
+  }
+  .page-top-bar-left {
+    gap: 9px;
+  }
+  .page-top-bar-apple {
+    font-size: 18px;
+  }
+  .page-top-bar-title {
+    font-size: 13px;
+  }
+  .page-top-bar-date {
+    font-size: 11px;
+  }
+  .menu-button {
+    top: 58px;
+    right: 14px;
+    width: 38px;
+    height: 38px;
+  }
+  .menu-panel {
+    top: 103px;
+    right: 14px;
+  }
+  .archives-body .menu-button {
+    top: 58px !important;
+    right: 14px !important;
+  }
+  .archives-body .menu-panel {
+    top: 103px !important;
+    right: 14px !important;
+  }
+}
+
+/* =========================================================
+   HARMONISATION VISUELLE — fond et barre supérieure
+   Référence : playlist2Love.css
+   Limité à l'accueil, au courrier et aux archives.
+========================================================= */
+.accueil-body,
+.courrier-body,
+.archives-body {
+  background:
+    radial-gradient(ellipse at 18% 18%, rgba(255,255,255,.95), transparent 37%),
+    radial-gradient(ellipse at 83% 28%, rgba(255,191,218,.72), transparent 45%),
+    radial-gradient(ellipse at 45% 100%, rgba(255,215,233,.9), transparent 55%),
+    linear-gradient(125deg, #fff1f7 0%, #f9dce9 46%, #f4c7df 100%);
+  background-attachment: fixed;
+}
+.accueil-body .intro-page,
+.courrier-body .main-page,
+.archives-body .archives-page {
+  background:
+    radial-gradient(ellipse at 18% 18%, rgba(255,255,255,.95), transparent 37%),
+    radial-gradient(ellipse at 83% 28%, rgba(255,191,218,.72), transparent 45%),
+    radial-gradient(ellipse at 45% 100%, rgba(255,215,233,.9), transparent 55%),
+    linear-gradient(125deg, #fff1f7 0%, #f9dce9 46%, #f4c7df 100%);
+  background-attachment: fixed;
+}
+
+.accueil-body .page-top-bar,
+.courrier-body .page-top-bar,
+.archives-body .page-top-bar {
+  top: 24px;
+  left: 28px;
+  right: 28px;
+  height: 52px;
+  padding: 0 24px;
+  border: 1px solid rgba(255,255,255,.8);
+  border-radius: 40px;
+  background: rgba(255,250,253,.47);
+  box-shadow: 0 4px 18px rgba(190,120,158,.08), inset 0 1px 1px rgba(255,255,255,.8);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+.accueil-body .page-top-bar-left,
+.courrier-body .page-top-bar-left,
+.archives-body .page-top-bar-left {
+  gap: 13px;
+  color: #a49ba5;
+}
+.accueil-body .page-top-bar-apple,
+.courrier-body .page-top-bar-apple,
+.archives-body .page-top-bar-apple {
+  color: #b6abb3;
+}
+.accueil-body .page-top-bar-title,
+.courrier-body .page-top-bar-title,
+.archives-body .page-top-bar-title {
+  color: #a49ba5;
+}
+.accueil-body .page-top-bar-date,
+.courrier-body .page-top-bar-date,
+.archives-body .page-top-bar-date {
+  color: #ad8b9d;
+}
+.accueil-body .bubble,
+.courrier-body .bubble,
+.archives-body .bubble {
+  border: 1px solid rgba(255,255,255,.8);
+  box-shadow: inset 0 0 18px rgba(255,255,255,.72), 0 8px 24px rgba(190,120,158,.08);
+  filter: blur(.2px);
+}
+.accueil-body .bubble.pink,
+.courrier-body .bubble.pink,
+.archives-body .bubble.pink {
+  background: radial-gradient(circle at 29% 23%, rgba(255,255,255,.98) 0%, rgba(255,255,255,.6) 9%, rgba(255,255,255,.12) 28%, transparent 47%), radial-gradient(circle at 68% 75%, rgba(233,151,192,.2), transparent 45%), radial-gradient(circle at 35% 35%, rgba(255,188,218,.45), transparent 72%);
+}
+.accueil-body .bubble.gray,
+.courrier-body .bubble.gray,
+.archives-body .bubble.gray {
+  background: radial-gradient(circle at 29% 23%, rgba(255,255,255,.98) 0%, rgba(255,255,255,.58) 10%, rgba(220,203,216,.2) 35%, transparent 60%);
+}
+@media (max-width: 768px) {
+  .accueil-body .page-top-bar,
+  .courrier-body .page-top-bar,
+  .archives-body .page-top-bar {
+    top: 18px;
+    left: 13px;
+    right: 13px;
+    height: 44px;
+    padding: 0 14px;
+    border-radius: 24px;
+  }
+}
+.accueil-body .menu-button,
+.courrier-body .menu-button,
+.archives-body .menu-button {
+  top: 96px;
+}
+.accueil-body .menu-panel,
+.courrier-body .menu-panel,
+.archives-body .menu-panel {
+  top: 160px;
+}
+@media (max-width: 768px) {
+  .accueil-body .menu-button,
+  .courrier-body .menu-button,
+  .archives-body .menu-button {
+    top: 72px;
+  }
+  .accueil-body .menu-panel,
+  .courrier-body .menu-panel,
+  .archives-body .menu-panel {
+    top: 122px;
+  }
+  .archives-body .menu-button { top: 72px !important; }
+  .archives-body .menu-panel { top: 122px !important; }
+}
+.archives-body .menu-button { top: 96px !important; }
+.archives-body .menu-panel { top: 160px !important; }
