@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>cartePostale — recto verso</title>
+<link rel="stylesheet" href="css/cartePostale.css">
+<link rel="stylesheet" href="css/cartePostale-lettre.css">
+<script src="js/cartePostale.js" defer></script>
+<script src="js/cartePostale-lettre.js" defer></script>
+</head>
+<body>
+<div class="bubble-background" aria-hidden="true">
+<span class="bubble bubble-1"></span><span class="bubble bubble-2"></span><span class="bubble bubble-3"></span>
+<span class="bubble bubble-4"></span><span class="bubble bubble-5"></span><span class="bubble bubble-6"></span>
+<span class="bubble bubble-7"></span><span class="bubble bubble-8"></span><span class="bubble bubble-9"></span>
+</div>
+<header class="topbar">
+<a class="brand" href="cartePostale.html"><span class="apple-logo" aria-label="Apple">&#63743;</span><span>playlist2Love</span></a>
+<span class="topbar-date">22 octobre</span>
+</header>
+<button class="menu-button" id="menuButton" aria-label="Afficher le menu" aria-expanded="false" aria-controls="menuPanel" type="button"><span></span><span></span><span></span></button>
+<nav class="menu-panel" id="menuPanel" aria-label="Navigation principale" hidden><a href="index.html">Accueil</a><a href="courrier.html">Petit courrier</a><a href="archives.html">Archives</a></nav>
+<main class="letter-page">
+<p class="letter-eyebrow">une carte, rien que pour toi</p><div class="letter-rule" aria-hidden="true">♡</div>
+<section class="cards-pair" aria-label="Recto et verso de la carte postale">
+<article class="card-side"><div class="card-controls"><span class="side-tag">recto</span><button class="zoom-button" type="button" data-zoom="recto" aria-label="Zoomer sur le recto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5M10.5 7v7M7 10.5h7"/></svg></button></div><svg class="postcard-art" viewBox="0 0 520 360" role="img" aria-label="Recto de la carte postale">
+<defs><linearGradient id="frontpaper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff9fa"/><stop offset="1" stop-color="#f3d6e1"/></linearGradient><pattern id="grainfront" width="18" height="18" patternUnits="userSpaceOnUse"><path d="M3 4l3 1m5 8l2-1m3-7l2 2" stroke="#d9a9bd" stroke-width=".5" opacity=".3"/></pattern><g id="flower" fill="none" stroke="#c68ea7" stroke-width="1.3"><path d="M0 0C15 6 18 17 8 24C0 28-4 17 3 15C9 13 11 19 7 21M4 7C-5 1-11 6-14 14M8 24C20 25 25 33 22 40"/><ellipse cx="-8" cy="3" rx="3" ry="6" transform="rotate(-35 -8 3)"/></g></defs>
+<path d="M34 10H486Q504 10 504 28V332Q504 350 486 350H34Q16 350 16 332V28Q16 10 34 10Z" fill="url(#frontpaper)" stroke="#fff" stroke-width="3"/>
+<rect x="29" y="23" width="462" height="314" rx="4" fill="url(#grainfront)" stroke="#d9afc0" stroke-width="1" stroke-dasharray="1 3"/>
+<use href="#flower" x="48" y="47"/><use href="#flower" x="472" y="47" transform="translate(944 0) scale(-1 1)"/><use href="#flower" x="48" y="313" transform="translate(0 626) scale(1 -1)"/><use href="#flower" x="472" y="313" transform="translate(944 626) scale(-1 -1)"/>
+<g transform="translate(260 165)" fill="none" stroke="#c58ca5" stroke-width="1.3"><ellipse rx="7" ry="17"/><ellipse rx="7" ry="17" transform="rotate(60)"/><ellipse rx="7" ry="17" transform="rotate(120)"/><circle r="3" fill="#c58ca5"/></g>
+<path d="M110 166H205M315 166H410" stroke="#c58ca5" stroke-width="1" stroke-dasharray="2 4"/>
+<text data-front-text x="260" y="218" text-anchor="middle" fill="#bd8ca2" font-family="Pencerio, 'Brush Script MT', cursive" font-size="21" font-style="italic">Pour toi, avec amour</text>
+<text x="260" y="246" text-anchor="middle" fill="#c58ca5" font-family="Georgia,serif" font-size="15">— ♡ —</text></svg></article>
+<article class="card-side"><div class="card-controls"><span class="side-tag">verso</span><button class="zoom-button" type="button" data-zoom="verso" aria-label="Zoomer sur le verso"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5M10.5 7v7M7 10.5h7"/></svg></button></div><svg class="postcard-art" viewBox="0 0 520 360" role="img" aria-label="Verso de la carte postale">
+<defs><linearGradient id="backpaper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff9fa"/><stop offset="1" stop-color="#f3d6e1"/></linearGradient><pattern id="grainback" width="18" height="18" patternUnits="userSpaceOnUse"><path d="M3 4l3 1m5 8l2-1m3-7l2 2" stroke="#d9a9bd" stroke-width=".5" opacity=".3"/></pattern><g id="cornerback" fill="none" stroke="#c68ea7" stroke-width="1.2"><path d="M0 0C15 6 18 17 8 24C0 28-4 17 3 15C9 13 11 19 7 21M4 7C-5 1-11 6-14 14M8 24C20 25 25 33 22 40"/></g></defs>
+<path d="M34 10H486Q504 10 504 28V332Q504 350 486 350H34Q16 350 16 332V28Q16 10 34 10Z" fill="url(#backpaper)" stroke="#fff" stroke-width="3"/>
+<rect x="29" y="23" width="462" height="314" rx="4" fill="url(#grainback)" stroke="#d9afc0" stroke-width="1" stroke-dasharray="1 3"/>
+<use href="#cornerback" x="48" y="47"/><use href="#cornerback" x="472" y="47" transform="translate(944 0) scale(-1 1)"/><use href="#cornerback" x="48" y="313" transform="translate(0 626) scale(1 -1)"/><use href="#cornerback" x="472" y="313" transform="translate(944 626) scale(-1 -1)"/>
+<text x="62" y="79" fill="#b58ba0" font-family="'Courier New',monospace" font-size="13">pencerio</text>
+<path d="M260 96V300" stroke="#d0a6b8" stroke-width="1"/>
+<g transform="translate(415 75)" fill="none" stroke="#c58ba4" stroke-width="1.2"><path d="M-25 0q14 6 28 0t28 0M-25 7q14 6 28 0t28 0M-25 14q14 6 28 0t28 0"/><rect x="-1" y="-12" width="48" height="59" stroke-dasharray="2 2"/><rect x="4" y="-7" width="38" height="49"/><path d="M23 5c-8-10-19 2 0 16c19-14 8-26 0-16Z"/></g>
+<text x="62" y="119" fill="#b58ba0" font-family="'Courier New',monospace" font-size="10">Mon cœur,</text>
+<text x="62" y="139" fill="#b58ba0" font-family="'Courier New',monospace" font-size="10">Il y a des choses que</text><text x="62" y="154" fill="#b58ba0" font-family="'Courier New',monospace" font-size="10">les mots disent mieux</text><text x="62" y="169" fill="#b58ba0" font-family="'Courier New',monospace" font-size="10">quand ils prennent</text><text x="62" y="184" fill="#b58ba0" font-family="'Courier New',monospace" font-size="10">leur temps.</text>
+<text x="62" y="216" fill="#b58ba0" font-family="'Courier New',monospace" font-size="10">Avec tout mon amour ♡</text>
+<g stroke="#d2a9bb" stroke-width="1"><path d="M285 205H455M285 229H455M285 253H455M285 277H455M285 301H455"/></g></svg></article>
+</section>
+<p class="zoom-hint">Clique sur une carte pour en admirer les détails</p>
+<details class="edit-panel"><summary>Personnaliser les textes</summary>
+<label for="frontMessage">Texte du recto — style manuscrit</label><input id="frontMessage" maxlength="60" value="Pour toi, avec amour">
+<label for="backMessage">Message au verso — Courier New</label><textarea id="backMessage" maxlength="240" placeholder="Écris ici ton petit mot doux...">Mon cœur,
+Il y a des choses que les mots disent mieux quand ils prennent leur temps.
+Avec tout mon amour ♡</textarea>
+<p style="color:#ad91a0;font:11px 'Courier New',monospace;line-height:1.5">La police Pencerio devra être ajoutée à ton projet pour afficher sa véritable typographie.</p></details>
+</main>
+<div class="zoom-overlay" id="zoomOverlay" hidden role="dialog" aria-modal="true" aria-label="Agrandissement de la carte"><div class="zoom-dialog"><button class="zoom-close" id="zoomClose" type="button" aria-label="Fermer">×</button><div id="zoomContent"></div></div></div>
+</body></html>
