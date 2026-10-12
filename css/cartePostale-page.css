@@ -1,0 +1,50 @@
+
+/* cartePostale-page.css — styles de contenu uniquement.
+   La top bar, le menu et le fond sont gérés par css/cartePostale.css. */
+.page-content {
+  position: relative; z-index: 1;
+  min-height: calc(100svh - 110px);
+  display: flex; flex-direction: column; align-items: center;
+  text-align: center; padding: clamp(25px, 4vh, 44px) 16px 28px;
+}
+.eyebrow { margin: 0 0 10px; color: #b58da2; font-size: 13px; letter-spacing: .02em; }
+.rule { display:flex; align-items:center; justify-content:center; gap:10px; width: min(220px, 55vw); color:#b9869e; margin:0 auto 16px; }
+.rule::before,.rule::after { content:""; height:1px; flex:1; background:linear-gradient(90deg,transparent,#cda4b7); }
+.rule::after { transform:scaleX(-1); }
+.rule span { font-size:17px; line-height:1; }
+.page-title { margin:0; color:#ad7e95; font:400 clamp(27px, 2.6vw, 39px)/1.18 Georgia,"Times New Roman",serif; }
+.intro { margin:17px 0 0; color:#ad91a0; font-size:13px; line-height:1.65; }
+.envelope-stage {
+  width:clamp(270px, 34vw, 410px); max-width:88vw;
+  margin:13px auto 0; filter:drop-shadow(0 12px 13px rgba(166,104,135,.12));
+  animation: envelope-float 7s ease-in-out infinite;
+}
+.envelope-art { display:block; width:100%; height:auto; }
+@keyframes envelope-float { 0%,100%{transform:translateY(0) rotate(-.25deg)} 50%{transform:translateY(-5px) rotate(.25deg)} }
+.open-envelope {
+  display:inline-flex; align-items:center; justify-content:center; gap:9px;
+  min-width:205px; margin:14px auto 0; padding:12px 23px;
+  border:1px solid rgba(255,255,255,.96); border-radius:999px;
+  background:rgba(255,249,252,.38); color:#b18ba0;
+  box-shadow:inset 0 1px 1px rgba(255,255,255,.9),0 4px 15px rgba(177,111,147,.06);
+  font:12px "Courier New",monospace; text-decoration:none;
+  transition:background .2s ease,transform .2s ease;
+}
+.open-envelope:hover { background:rgba(255,255,255,.68); transform:translateY(-1px); }
+.corner-flourish { position:fixed; z-index:1; bottom:10px; width:100px; opacity:.38; color:#c58ba5; pointer-events:none; }
+.corner-flourish.left {left:0}.corner-flourish.right {right:0;transform:scaleX(-1)}
+@media(max-width:700px) {
+  .page-content { min-height:calc(100svh - 90px); padding-top:25px; padding-bottom:25px; }
+  .eyebrow {font-size:12px}.page-title {font-size:clamp(25px,7vw,32px);max-width:95vw}
+  .intro {font-size:12px;margin-top:14px}
+  .envelope-stage {width:min(78vw,330px);margin-top:17px}
+  .open-envelope {margin-top:14px;min-width:190px;padding:11px 19px}
+  .corner-flourish {width:60px;bottom:4px}
+}
+@media(max-height:720px) and (min-width:701px) {
+  .page-content {padding-top:18px}
+  .envelope-stage {width:clamp(245px,30vw,330px);margin-top:8px}
+  .intro {margin-top:12px}
+  .open-envelope {margin-top:8px}
+}
+@media(prefers-reduced-motion:reduce){.envelope-stage{animation:none}.open-envelope{transition:none}}
