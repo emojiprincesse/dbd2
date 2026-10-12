@@ -31,105 +31,105 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       title: "Something About Us",
       artist: "emojiprincesse",
-      src: "daft-punk.mp3",
+      src: "mp3/daft-punk.mp3",
       duration: "",
       art: "art-1"
     },
     {
       title: "drive ME crazy!",
       artist: "emojiprincesse",
-      src: "lil-yatchy.mp3",
+      src: "mp3/lil-yatchy.mp3",
       duration: "",
       art: "art-2"
     },
     {
       title: "Carte Postale (pt.2)",
       artist: "emojiprincesse",
-      src: "tengo-john.mp3",
+      src: "mp3/tengo-john.mp3",
       duration: "",
       art: "art-3"
     },
     {
       title: "Balançoire",
       artist: "emojiprincesse",
-      src: "jade.mp3",
+      src: "mp3/jade.mp3",
       duration: "",
       art: "art-4"
     },
     {
       title: "Toi & Moi",
       artist: "emojiprincesse",
-      src: "prince-k.mp3",
+      src: "mp3/prince-k.mp3",
       duration: "",
       art: "art-5"
     },
     {
       title: "I <3 U",
       artist: "emojiprincesse",
-      src: "j9.mp3",
+      src: "mp3/j9.mp3",
       duration: "",
       art: "art-6"
     },
     {
       title: "Funny How Time Flies (When You're Having Fun)",
       artist: "emojiprincesse",
-      src: "janet.mp3",
+      src: "mp3/janet.mp3",
       duration: "",
       art: "art-3"
     },
     {
       title: "Heaven Can Wait",
       artist: "emojiprincesse",
-      src: "michael.mp3",
+      src: "mp3/michael.mp3",
       duration: "",
       art: "art-2"
     },
     {
       title: "Dès que j'te vois",
       artist: "emojiprincesse",
-      src: "paradis.mp3",
+      src: "mp3/paradis.mp3",
       duration: "",
       art: "art-5"
     },
     {
       title: "Dreamflower",
       artist: "emojiprincesse",
-      src: "tarika.mp3",
+      src: "mp3/tarika.mp3",
       duration: "",
       art: "art-4"
     },
     {
       title: "Kinky Love",
       artist: "emojiprincesse",
-      src: "pale.mp3",
+      src: "mp3/pale.mp3",
       duration: "",
       art: "art-1"
     },
     {
       title: "Altogether",
       artist: "emojiprincesse",
-      src: "slowdive.mp3",
+      src: "mp3/slowdive.mp3",
       duration: "",
       art: "art-6"
     },
     {
       title: "No Ordinary Love (2005 Remaster)",
       artist: "emojiprincesse",
-      src: "deftones.mp3",
+      src: "mp3/deftones.mp3",
       duration: "",
       art: "art-2"
     },
     {
       title: "Show Me How",
       artist: "emojiprincesse",
-      src: "menitrust.mp3",
+      src: "mp3/menitrust.mp3",
       duration: "",
       art: "art-5"
     },
     {
       title: "First Crush",
       artist: "emojiprincesse",
-      src: "bladee.mp3",
+      src: "mp3/bladee.mp3",
       duration: "",
       art: "art-3"
     }
