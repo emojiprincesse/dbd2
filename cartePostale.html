@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>cartePostale — une carte pour toi</title>
+<link rel="stylesheet" href="css/cartePostale.css">
+<link rel="stylesheet" href="css/cartePostale-page.css">
+<script src="js/cartePostale.js" defer></script>
+<script src="js/cartePostale-page.js" defer></script>
+</head>
+<body>
+<div class="bubble-background" aria-hidden="true">
+<span class="bubble bubble-1"></span><span class="bubble bubble-2"></span><span class="bubble bubble-3"></span>
+<span class="bubble bubble-4"></span><span class="bubble bubble-5"></span><span class="bubble bubble-6"></span>
+<span class="bubble bubble-7"></span><span class="bubble bubble-8"></span><span class="bubble bubble-9"></span>
+</div>
+<header class="topbar">
+<a class="brand" href="cartePostale.html"><span class="apple-logo" aria-label="Apple">&#63743;</span><span>playlist2Love</span></a>
+<span class="topbar-date">22 octobre</span>
+</header>
+<button class="menu-button" id="menuButton" aria-label="Afficher le menu" aria-expanded="false" aria-controls="menuPanel" type="button"><span></span><span></span><span></span></button>
+<nav class="menu-panel" id="menuPanel" aria-label="Navigation principale" hidden><a href="index.html">Accueil</a><a href="courrier.html">Petit courrier</a><a href="archives.html">Archives</a></nav>
+<main class="page-content">
+<p class="eyebrow">cartePostale</p><div class="rule" aria-hidden="true"><span>♡</span></div>
+<h1 class="page-title">une carte postale pour toi &lt;3</h1>
+<div class="rule" aria-hidden="true" style="margin-top:17px;margin-bottom:0"><span>✿</span></div>
+<p class="intro">Ouvre l’enveloppe pour découvrir<br>ton mot doux...</p>
+<div class="envelope-stage"><svg class="envelope-art" viewBox="0 0 620 420" role="img" aria-label="Enveloppe rose poudré ornée de dentelle">
+<defs>
+ <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff9fb"/><stop offset=".5" stop-color="#f8dce7"/><stop offset="1" stop-color="#efc8d9"/></linearGradient>
+ <linearGradient id="flap" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fffafd"/><stop offset=".65" stop-color="#f5d4e1"/><stop offset="1" stop-color="#edc1d3"/></linearGradient>
+ <pattern id="lace" width="22" height="22" patternUnits="userSpaceOnUse"><path d="M11 1C18 5 18 9 11 11C4 9 4 5 11 1ZM11 11C18 15 18 19 11 21C4 19 4 15 11 11Z" fill="none" stroke="#fffafd" stroke-width="1.1"/><circle cx="11" cy="11" r="2" fill="none" stroke="#fff" stroke-width=".8"/></pattern>
+ <g id="leaf" fill="none" stroke="#fffafd" stroke-width="1.5"><path d="M0 0C18 2 22 15 10 23C0 28-5 15 4 13C11 11 13 18 8 20M5 8C-7 2-12 8-16 17M10 23C22 24 29 34 25 42M5 8C18 6 24-2 24-9"/><ellipse cx="-9" cy="5" rx="3" ry="7" transform="rotate(-35 -9 5)"/><ellipse cx="20" cy="1" rx="3" ry="7" transform="rotate(45 20 1)"/></g>
+</defs>
+<g transform="rotate(-4 310 210)">
+ <rect x="42" y="50" width="536" height="320" rx="3" fill="#d8a8bd" opacity=".18"/>
+ <rect x="35" y="42" width="550" height="330" rx="3" fill="url(#paper)" stroke="#fff" stroke-width="2.5"/>
+ <path d="M37 44L310 226L583 44" fill="#fff8fb" opacity=".8" stroke="#fff" stroke-width="1.4"/>
+ <path d="M37 44L310 226L583 44L583 58L310 244L37 58Z" fill="url(#lace)" opacity=".95"/>
+ <path d="M39 51Q63 102 101 113Q134 124 155 151Q184 181 217 190Q251 199 279 221Q300 237 310 240Q320 237 341 221Q369 199 403 190Q436 181 465 151Q486 124 519 113Q557 102 581 51" fill="none" stroke="#fff" stroke-width="4"/>
+ <path d="M39 58Q65 109 103 120Q136 131 158 158Q187 188 219 197Q253 206 281 228Q300 243 310 246Q320 243 339 228Q367 206 401 197Q433 188 462 158Q484 131 517 120Q555 109 581 58" fill="none" stroke="#e6b4c9" stroke-width="1.4"/>
+ <path d="M37 370L231 222L310 260L389 222L583 370" fill="url(#paper)" stroke="#fff" stroke-width="1.5"/>
+ <path d="M44 364L231 231L310 269L389 231L576 364" fill="url(#lace)" opacity=".45"/>
+ <use href="#leaf" x="58" y="295"/><use href="#leaf" x="562" y="295" transform="translate(1124 0) scale(-1 1)"/>
+ <use href="#leaf" x="58" y="83" transform="translate(0 166) scale(1 -1)"/><use href="#leaf" x="562" y="83" transform="translate(1124 166) scale(-1 -1)"/>
+ <g transform="translate(310 278)"><circle r="31" fill="#e7b4c9" opacity=".7"/><circle r="25" fill="url(#flap)" stroke="#fff" stroke-width="2.5"/><circle r="19" fill="none" stroke="#d9a3ba" stroke-width="1.3" stroke-dasharray="1 3"/><g fill="none" stroke="#fff" stroke-width="1.5"><ellipse rx="5" ry="12"/><ellipse rx="5" ry="12" transform="rotate(60)"/><ellipse rx="5" ry="12" transform="rotate(120)"/><circle r="3" fill="#fff"/></g></g>
+</g></svg></div>
+<div class="rule" aria-hidden="true" style="margin-top:9px;margin-bottom:0"><span>✿</span></div>
+<a class="open-envelope" href="cartePostale-lettre.html">ouvrir l’enveloppe <span aria-hidden="true">→</span></a>
+</main>
+<svg class="corner-flourish left" viewBox="0 0 100 130" aria-hidden="true"><path d="M4 126Q5 78 22 59Q43 38 35 19Q30 4 19 16Q11 27 24 32M5 97Q35 97 51 119Q65 131 86 112M22 60Q8 50 13 36" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+<svg class="corner-flourish right" viewBox="0 0 100 130" aria-hidden="true"><path d="M4 126Q5 78 22 59Q43 38 35 19Q30 4 19 16Q11 27 24 32M5 97Q35 97 51 119Q65 131 86 112M22 60Q8 50 13 36" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+</body></html>
