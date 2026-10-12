@@ -1,1 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f8dce9">
+  <meta name="description" content="Carte postale">
+  <title>cartePostale</title>
+  <link rel="stylesheet" href="css/cartePostale.css">
+  <script src="js/cartePostale.js" defer></script>
+</head>
+<body>
+  <!-- Bulles animées en arrière-plan -->
+  <div class="bubble-background" aria-hidden="true">
+    <span class="bubble bubble-1"></span>
+    <span class="bubble bubble-2"></span>
+    <span class="bubble bubble-3"></span>
+    <span class="bubble bubble-4"></span>
+    <span class="bubble bubble-5"></span>
+    <span class="bubble bubble-6"></span>
+    <span class="bubble bubble-7"></span>
+    <span class="bubble bubble-8"></span>
+    <span class="bubble bubble-9"></span>
+  </div>
 
+  <!-- Barre supérieure -->
+  <header class="topbar">
+    <a class="brand" href="cartePostale.html">
+      <span class="apple-logo" aria-label="Apple">&#63743;</span>
+      <span>cartePostale</span>
+    </a>
+    <span class="topbar-date">22 octobre</span>
+  </header>
+
+  <!-- Menu hamburger -->
+  <button
+    class="menu-button"
+    id="menuButton"
+    aria-label="Afficher le menu"
+    aria-expanded="false"
+    aria-controls="menuPanel"
+    type="button"
+  >
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <nav class="menu-panel" id="menuPanel" aria-label="Navigation principale" hidden>
+    <a href="index.html">Accueil</a>
+    <a href="courrier.html">Petit courrier</a>
+    <a href="archives.html">Archives</a>
+  </nav>
+</body>
+</html>
