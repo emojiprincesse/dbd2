@@ -199,7 +199,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const artClass = track.art || "art-1";
     ipodArtwork.className = `album-art current-art ${artClass}`;
     bottomArtwork.className = `mini-art ${artClass}`;
-    ipodArtwork.innerHTML = '<img src="images/playlist-cover.png" alt="Pochette de l’album" />';
+    ipodArtwork.innerHTML = '<img src="images/ipod-cover.png" alt="Pochette de l’album" />';
     bottomArtwork.innerHTML = '<img src="images/playlist-cover.png" alt="Pochette de l’album" />';
   }
   function updateTrackInfo() {
