@@ -50,10 +50,10 @@ document.addEventListener("DOMContentLoaded", () => {
       art: "art-3"
     },
     {
-      title: "Can't Help Falling in Love",
-      artist: "Elvis Presley",
-      src: "",
-      duration: "3:01",
+      title: "Balançoire",
+      artist: "emojiprincesse",
+      src: "jade.mp3",
+      duration: "",
       art: "art-4"
     },
     {
