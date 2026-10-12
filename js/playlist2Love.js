@@ -85,51 +85,51 @@ document.addEventListener("DOMContentLoaded", () => {
       art: "art-2"
     },
     {
-      title: "Those Eyes",
-      artist: "New West",
-      src: "",
+      title: "Dès que j'te vois",
+      artist: "emojiprincesse",
+      src: "paradis.mp3",
       duration: "",
       art: "art-5"
     },
     {
-      title: "Yellow",
-      artist: "Coldplay",
-      src: "",
+      title: "Dreamflower",
+      artist: "emojiprincesse",
+      src: "tarika.mp3",
       duration: "",
       art: "art-4"
     },
     {
-      title: "Until I Found You",
-      artist: "Stephen Sanchez",
-      src: "",
+      title: "Kinky Love",
+      artist: "emojiprincesse",
+      src: "pale.mp3",
       duration: "",
       art: "art-1"
     },
     {
-      title: "I Wanna Be Yours",
-      artist: "Arctic Monkeys",
-      src: "",
+      title: "Altogether",
+      artist: "emojiprincesse",
+      src: "slowdive.mp3",
       duration: "",
       art: "art-6"
     },
     {
-      title: "Sweet",
-      artist: "Cigarettes After Sex",
-      src: "",
+      title: "No Ordinary Love (2005 Remaster)",
+      artist: "emojiprincesse",
+      src: "deftones.mp3",
       duration: "",
       art: "art-2"
     },
     {
-      title: "Just the Two of Us",
-      artist: "Grover Washington Jr.",
-      src: "",
+      title: "Show Me How",
+      artist: "emojiprincesse",
+      src: "menitrust.mp3",
       duration: "",
       art: "art-5"
     },
     {
-      title: "Une chanson pour nous",
-      artist: "À compléter",
-      src: "",
+      title: "First Crush",
+      artist: "emojiprincesse",
+      src: "bladee.mp3",
       duration: "",
       art: "art-3"
     }
