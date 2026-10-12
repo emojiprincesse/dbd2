@@ -57,31 +57,31 @@ document.addEventListener("DOMContentLoaded", () => {
       art: "art-4"
     },
     {
-      title: "Best Part",
-      artist: "Daniel Caesar ft. H.E.R.",
-      src: "",
-      duration: "3:29",
+      title: "Toi & Moi",
+      artist: "emojiprincesse",
+      src: "prince-k.mp3",
+      duration: "",
       art: "art-5"
     },
     {
-      title: "Perfect",
-      artist: "Ed Sheeran",
-      src: "",
-      duration: "4:23",
+      title: "I <3 U",
+      artist: "emojiprincesse",
+      src: "j9.mp3",
+      duration: "",
       art: "art-6"
     },
     {
-      title: "Lover",
-      artist: "Taylor Swift",
-      src: "",
-      duration: "3:41",
+      title: "Funny How Time Flies (When You're Having Fun)",
+      artist: "emojiprincesse",
+      src: "janet.mp3",
+      duration: "",
       art: "art-3"
     },
     {
-      title: "Je te laisserai des mots",
-      artist: "Patrick Watson",
-      src: "",
-      duration: "4:00",
+      title: "Heaven Can Wait",
+      artist: "emojiprincesse",
+      src: "michael.mp3",
+      duration: "",
       art: "art-2"
     },
     {
